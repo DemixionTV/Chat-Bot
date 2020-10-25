@@ -138,9 +138,24 @@ public class OpenSpaceBot extends TelegramLongPollingBot {
                 a = i;
             }
         }
-        sendMsg(msg,"Ответ сети:" + a);
-
-
+		FileReader answer_1 = new FileReader("answers.diamon");
+		Scanner answer_scanner_1 = new Scanner(answer_1);
+		int answer_count = 0;
+		while(answer_scanner_1.hasNextLine()){
+			answer_scanner_1.nextLine();
+			answer_count++;
+		}
+		answer_1.close();
+		FileReader answer_2 = new FileReader("answers.diamon");
+		String[] answers[] = new String[answer_count];
+		Scanner answer_scanner_2 = new Scanner(answer_2);
+		int h =0;
+		while(answer_scanner_2.hasNextLine()){
+			answers[h] = answer_scanner.nextLine();
+			h++;
+		}
+		sendMsg(msg,anwers[a]);
+		
     }
 
     public String getBotUsername() {
