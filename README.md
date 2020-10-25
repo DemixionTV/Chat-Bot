@@ -3,3 +3,5 @@
 файлы answers,questions,words и train_string
 Nnetwork - класс нейросети
 OpenSpaceBot - класс бота телеграм
+train_strings - файлы обучения бота
+words - словарь бота
